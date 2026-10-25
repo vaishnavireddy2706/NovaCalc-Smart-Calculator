@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b16">
+  <meta name="description" content="A modern, responsive smart calculator.">
+
+  <title>NovaCalc | Smart Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <main class="page">
+    <header class="page-header">
+      <a href="#" class="brand">NOVA<span>CALC.</span></a>
+      <p>Simple calculations. Smarter design.</p>
+    </header>
+
+    <section class="calculator" aria-label="Smart calculator">
+
+      <div class="calculator-heading">
+        <div>
+          <p class="eyebrow">YOUR SMART CALCULATOR</p>
+          <h1>Let's calculate<span>.</span></h1>
+        </div>
+        <div class="status-icon" aria-hidden="true">✳</div>
+      </div>
+
+      <!-- Calculator display -->
+      <div class="display">
+        <div id="history" class="history" aria-live="polite"></div>
+        <output id="display" class="display-value"
+                aria-label="Calculator display" aria-live="polite">0</output>
+      </div>
+
+      <!-- Calculator buttons -->
+      <div class="keypad" id="keypad">
+
+        <button class="key utility" data-action="clear"
+                type="button">AC</button>
+        <button class="key utility" data-action="delete"
+                type="button" aria-label="Delete last digit">DEL</button>
+        <button class="key utility" data-action="percent"
+                type="button">%</button>
+        <button class="key operator" data-operator="/"
+                type="button" aria-label="Divide">÷</button>
+
+        <button class="key" data-number="7" type="button">7</button>
+        <button class="key" data-number="8" type="button">8</button>
+        <button class="key" data-number="9" type="button">9</button>
+        <button class="key operator" data-operator="*"
+                type="button" aria-label="Multiply">×</button>
+
+        <button class="key" data-number="4" type="button">4</button>
+        <button class="key" data-number="5" type="button">5</button>
+        <button class="key" data-number="6" type="button">6</button>
+        <button class="key operator" data-operator="-"
+                type="button" aria-label="Subtract">−</button>
+
+        <button class="key" data-number="1" type="button">1</button>
+        <button class="key" data-number="2" type="button">2</button>
+        <button class="key" data-number="3" type="button">3</button>
+        <button class="key operator" data-operator="+"
+                type="button" aria-label="Add">+</button>
+
+        <button class="key utility" data-action="sign"
+                type="button">+/−</button>
+        <button class="key" data-number="0" type="button">0</button>
+        <button class="key" data-action="decimal"
+                type="button">.</button>
+        <button class="key equals" data-action="equals"
+                type="button">=</button>
+      </div>
+
+      <div class="calculator-footer">
+        <span><i></i> READY TO CALCULATE</span>
+        <span>⌨ Keyboard supported</span>
+      </div>
+    </section>
+
+    <footer class="page-footer">
+      <p>Made with <span>♥</span> for curious minds</p>
+      <p>© <span id="year"></span> NovaCalc</p>
+    </footer>
+  </main>
+
+</body>
+</html>
